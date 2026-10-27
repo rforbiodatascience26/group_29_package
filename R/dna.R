@@ -13,4 +13,4 @@ dna <- function(sequence_length){
 }
 
 #' @examples
-print(dna(32))
+print(dna(33))
