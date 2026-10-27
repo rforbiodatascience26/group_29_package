@@ -1,0 +1,40 @@
+Package: central.dogma
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(
+    person(
+      given = "Sara", 
+      family = "Townsend Escalante",
+      role = "aut",
+      email = "s263516@dtu.dk"
+    ),
+    person(
+       given = "Vera",
+       family = "Vecherskaia",
+       role = "aut",
+       email = "s263709@dtu.dk"
+    ),
+    person(
+       given = "Daniel",
+       family = "Cifuentes Garcia",
+       role = "aut",
+       email = "s263476@dtu.dk"
+    ),
+    person(
+       given = "Diana Eliza",
+       family = "Manoliu",
+       role = "aut",
+       email = "s262118@dtu.dk"
+    ),
+    person(
+       given = "Jose Antonio",
+       family = "Muriel",
+       role = "aut",
+       email = "s263486@dtu.dk")
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
