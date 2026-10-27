@@ -12,5 +12,5 @@ dna <- function(sequence_length){
   return(dna_sequence)
 }
 
-#' @examples
-print(dna(33))
+#' @examples print(dna(33))
+
