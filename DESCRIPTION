@@ -33,8 +33,11 @@ Authors@R: c(
        role = "aut",
        email = "s263486@dtu.dk")
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: This dataset describes different codon combinations translation to aminoacids.
+source \url{https: //www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?chapter=tgencodes#SG1}
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.2
