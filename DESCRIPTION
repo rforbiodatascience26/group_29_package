@@ -6,19 +6,19 @@ Authors@R: c(
     person(
       given = "Sara", 
       family = "Townsend Escalante",
-      role = c("aut", "cre"),
+      role = "aut",
       email = "s263516@dtu.dk"
     ),
     person(
        given = "Vera",
        family = "Vecherskaia",
-       role = c("aut", "cre"),
+       role = "aut",
        email = "s263709@dtu.dk"
     ),
     person(
        given = "Daniel",
        family = "Cifuentes Garcia",
-       role = c("aut", "cre"),
+       role = "aut",
        email = "s263476@dtu.dk"
     ),
     person(
@@ -30,7 +30,7 @@ Authors@R: c(
     person(
        given = "Jose Antonio",
        family = "Muriel Muriel",
-       role = c("aut", "cre"),
+       role = "aut",
        email = "s263486@dtu.dk")
   )
 Description: This dataset describes different codon combinations translation to aminoacids.
