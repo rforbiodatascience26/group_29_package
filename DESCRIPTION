@@ -29,7 +29,7 @@ Authors@R: c(
     ),
     person(
        given = "Jose Antonio",
-       family = "Muriel",
+       family = "Muriel Muriel",
        role = "aut",
        email = "s263486@dtu.dk")
   )
