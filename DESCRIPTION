@@ -6,31 +6,31 @@ Authors@R: c(
     person(
       given = "Sara", 
       family = "Townsend Escalante",
-      role = "aut",
+      role = c("aut", "cre"),
       email = "s263516@dtu.dk"
     ),
     person(
        given = "Vera",
        family = "Vecherskaia",
-       role = "aut",
+       role = c("aut", "cre"),
        email = "s263709@dtu.dk"
     ),
     person(
        given = "Daniel",
        family = "Cifuentes Garcia",
-       role = "aut",
+       role = c("aut", "cre"),
        email = "s263476@dtu.dk"
     ),
     person(
        given = "Diana Eliza",
        family = "Manoliu",
-       role = "aut",
+       role = c("aut", "cre"),
        email = "s262118@dtu.dk"
     ),
     person(
        given = "Jose Antonio",
        family = "Muriel Muriel",
-       role = "aut",
+       role = c("aut", "cre"),
        email = "s263486@dtu.dk")
   )
 Description: This dataset describes different codon combinations translation to aminoacids.
@@ -41,3 +41,6 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
