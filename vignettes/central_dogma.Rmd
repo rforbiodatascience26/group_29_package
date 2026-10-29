@@ -17,3 +17,17 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(central.dogma)
 ```
+
+**a brief description of what the package is about:**
+
+**demonstrate how each function in the package is used (individually and in conjunction with each other):**
+
+**use cases for the package:**
+
+**what other functions could be included:**
+
+**main points from the discussion in Task 3:**
+
+- It is a good idea to limit the number of dependencies your package has, to make it lighter and easier to understand, more self-contained, and to avoid dependencies' version conflicts
+
+- Howeverm it can’t always be avoided as many packages in R rely on each other, and writing each function from scratch can take a lot of time and effort
