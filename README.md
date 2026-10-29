@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # central.dogma
 
 ``` r
@@ -12,79 +6,57 @@ library(central.dogma)
 
 **Package overview**
 
-This package contains a collection of simple R functions illustrating
-the central dogma of molecular biology. The functions can be used
-individually or together to demonstrate how a DNA sequence can be
-generated, transcribed into RNA, and finally translated into an amino
-acid sequence.
+This package contains a collection of simple R functions illustrating the central dogma of molecular biology. The functions can be used individually or together to demonstrate how a DNA sequence can be generated, transcribed into RNA, and finally translated into an amino acid sequence.
 
-For testing the functionalities of the package, the user can start by
-generating a random DNA sequence using the function *dna.* The package
-also includes a codon table, which is used by the function
-*translate_to_aa*, and can be found under *data/codons.rda*.
+For testing the functionalities of the package, the user can start by generating a random DNA sequence using the function *dna.* The package also includes a codon table, which is used by the function *translate_to_aa*, and can be found under *data/codons.rda*.
 
 **Functions included in the package**
 
-***dna*** - DNA sequence generation - generates a random DNA sequence of
-a given length
+***dna*** - DNA sequence generation - generates a random DNA sequence of a given length
 
-Input: *sequence_length*, integer describing the intended length of the
-DNA sequence
+Input: *sequence_length*, integer describing the intended length of the DNA sequence
 
 Output: randomly generated DNA sequence of length sequence_length
 
-Example: dna(10) may return the randomly sampled 10-character sequence
-“ACGTCGATAG”.
+Example: dna(10) may return the randomly sampled 10-character sequence “ACGTCGATAG”.
 
-***transcribe_dna*** - DNA transcription - transcribes a DNA sequence
-into an RNA sequence by replacing thymine (T) with uracil (U) - $$Can
+***transcribe_dna*** - DNA transcription - transcribes a DNA sequence into an RNA sequence by replacing thymine (T) with uracil (U) - $$Can
 take input from function 1$$
 
-Input: *dna*, a string containing a DNA sequence (expected: capital
-letters)
+Input: *dna*, a string containing a DNA sequence (expected: capital letters)
 
 Output: an RNA sequence in which thymine has been replaced by uracil
 
-Example: transcribe_dna(“ACGTCGATAG”) returns the RNA sequence
-“ACGUCGAUAG”.
+Example: transcribe_dna(“ACGTCGATAG”) returns the RNA sequence “ACGUCGAUAG”.
 
-***define_codons*** - Codon definition - splits an RNA sequence into
-codons (groups of three bases), starting from a chosen position - $$Can
+***define_codons*** - Codon definition - splits an RNA sequence into codons (groups of three bases), starting from a chosen position - $$Can
 take input from function 2$$
 
-Input: *RNA_seq*, a string containing an RNA sequence; *start*, the
-position where the codons begin (default 1)
+Input: *RNA_seq*, a string containing an RNA sequence; *start*, the position where the codons begin (default 1)
 
 Output: a character vector with the RNA sequence divided into codons
 
 Example: define_codons(“AUGGCCUAA”) returns “AUG” “GCC” “UAA”.
 
-***translate_to_aa*** - Translation - translates a vector of codons into
-an amino acid sequence using the codon table included in the package -
-$$Can take input from function 3$$
+***translate_to_aa*** - Translation - translates a vector of codons into an amino acid sequence using the codon table included in the package - $$Can take input from function 3$$
 
 Input: *RNA_codons*, a character vector of codons
 
-Output: a string with the amino acid sequence, in one-letter code (“\_”
-marks a stop codon)
+Output: a string with the amino acid sequence, in one-letter code (“\_” marks a stop codon)
 
 Example: translate_to_aa(c(“AUG”, “GCC”, “UAA”)) returns “MA\_”.
 
-***aa_counts*** - Amino acid counts - plots how many times each amino
-acid appears in a protein sequence - $$Can take input from function 4$$
+***aa_counts*** - Amino acid counts - plots how many times each amino acid appears in a protein sequence - $$Can take input from function 4$$
 
 Input: *translation*, a string with an amino acid sequence
 
-Output: a bar plot (ggplot2) showing the count of each amino acid
-present in the sequence
+Output: a bar plot (ggplot2) showing the count of each amino acid present in the sequence
 
-Example: aa_counts(“MAMAGK”) draws a bar plot where M and A have a count
-of 2, and G and K a count of 1.
+Example: aa_counts(“MAMAGK”) draws a bar plot where M and A have a count of 2, and G and K a count of 1.
 
 **Using the functions together**
 
-The functions can be chained to go from a random DNA sequence to a plot
-of amino acid counts:
+The functions can be chained to go from a random DNA sequence to a plot of amino acid counts:
 
 ``` r
 set.seed(1)
@@ -107,18 +79,12 @@ Examples of other possible functions would be
 
 -   adding stochastic methylation to some CpG sites on the DNA
 
--   loading specific DNA/RNA/Protein sequences for a given organism and
-    a given gene/protein from a relevant database
+-   loading specific DNA/RNA/Protein sequences for a given organism and a given gene/protein from a relevant database
 
--   adding “reverse polymerases” - say, to go from protein sequence to
-    DNA (akin to the DRT3 system)
+-   adding “reverse polymerases” - say, to go from protein sequence to DNA (akin to the DRT3 system)
 
 **main points from the discussion in Task 3:**
 
--   It is a good idea to limit the number of dependencies your package
-    has, to make it lighter and easier to understand, more
-    self-contained, and to avoid dependencies’ version conflicts
+-   It is a good idea to limit the number of dependencies your package has, to make it lighter and easier to understand, more self-contained, and to avoid dependencies’ version conflicts
 
--   However it can’t always be avoided as many packages in R rely on
-    each other, and writing each function from scratch can take a lot of
-    time and effort
+-   However it can’t always be avoided as many packages in R rely on each other, and writing each function from scratch can take a lot of time and effort
