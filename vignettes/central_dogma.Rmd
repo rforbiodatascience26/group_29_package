@@ -66,4 +66,4 @@ Examples of other possible functions would be
 
 -   It is a good idea to limit the number of dependencies your package has, to make it lighter and easier to understand, more self-contained, and to avoid dependencies' version conflicts
 
--   Howeverm it can’t always be avoided as many packages in R rely on each other, and writing each function from scratch can take a lot of time and effort
+-   However it can’t always be avoided as many packages in R rely on each other, and writing each function from scratch can take a lot of time and effort
