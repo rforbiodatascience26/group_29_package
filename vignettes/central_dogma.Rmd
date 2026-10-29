@@ -42,11 +42,43 @@ Output: an RNA sequence in which thymine has been replaced by uracil
 
 Example: transcribe_dna("ACGTCGATAG") returns the RNA sequence "ACGUCGAUAG".
 
-Function 3 -
+***define_codons*** - Codon definition - splits an RNA sequence into codons (groups of three bases), starting from a chosen position - [Can take input from function 2]
 
-Function 4 -
+Input: *RNA_seq*, a string containing an RNA sequence; *start*, the position where the codons begin (default 1)
 
-Function 5 -
+Output: a character vector with the RNA sequence divided into codons
+
+Example: define_codons("AUGGCCUAA") returns "AUG" "GCC" "UAA".
+
+***translate_to_aa*** - Translation - translates a vector of codons into an amino acid sequence using the codon table included in the package - [Can take input from function 3]
+
+Input: *RNA_codons*, a character vector of codons
+
+Output: a string with the amino acid sequence, in one-letter code ("_" marks a stop codon)
+
+Example: translate_to_aa(c("AUG", "GCC", "UAA")) returns "MA_".
+
+***aa_counts*** - Amino acid counts - plots how many times each amino acid appears in a protein sequence - [Can take input from function 4]
+
+Input: *translation*, a string with an amino acid sequence
+
+Output: a bar plot (ggplot2) showing the count of each amino acid present in the sequence
+
+Example: aa_counts("MAMAGK") draws a bar plot where M and A have a count of 2, and G and K a count of 1.
+
+**Using the functions together**
+
+The functions can be chained to go from a random DNA sequence to a plot of amino acid counts:
+
+```{r}
+set.seed(1)
+my_dna <- dna(60)
+my_rna <- transcribe_dna(my_dna)
+my_codons <- define_codons(my_rna)
+my_protein <- translate_to_aa(my_codons)
+aa_counts(my_protein)
+```
+
 
 **use cases for the package:**
 
