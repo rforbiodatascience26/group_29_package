@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-#### GitHub link: <https://github.com/rforbiodatascience26/group_29_package>
+**GitHub link:** <https://github.com/rforbiodatascience26/group_29_package>  
 
 ```{r setup}
 library(central.dogma)
