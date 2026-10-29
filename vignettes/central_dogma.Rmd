@@ -22,9 +22,29 @@ library(central.dogma)
 
 **demonstrate how each function in the package is used (individually and in conjunction with each other):**
 
+Function 1 - DNA sequence generation - generates a random DNA sequence of a given length
+
+Function 2 - [Can take input from function 1]
+
+Function 3 -
+
+Function 4 -
+
+Function 5 -
+
 **use cases for the package:**
 
+Converting DNA sequence files to RNA sequence files, etc
+
 **what other functions could be included:**
+
+Examples of other possible functions would be
+
+- adding stochastic methylation to some CpG sites on the DNA
+
+- loading specific DNA/RNA/Protein sequences for a given organism and a given gene/protein from a relevant database
+
+- adding "reverse polymerases" - say, to go from protein sequence to DNA (akin to the DRT3 system)
 
 **main points from the discussion in Task 3:**
 
