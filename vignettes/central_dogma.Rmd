@@ -18,13 +18,29 @@ knitr::opts_chunk$set(
 library(central.dogma)
 ```
 
-**a brief description of what the package is about:**
+**Package overview**
 
-**demonstrate how each function in the package is used (individually and in conjunction with each other):**
+This package contains a collection of simple R functions illustrating the central dogma of molecular biology. The aim of the package is to provide users with a simplified overview of the basic processes involved in the creation of proteins, starting from DNA. The functions can be used individually or together to demonstrate how a DNA sequence can be generated, transcribed into RNA, and finally translated into an amino acid sequence.
 
-Function 1 - DNA sequence generation - generates a random DNA sequence of a given length
+For testing the functionalities of the package, the user can start by generating a random DNA sequence using the function *dna.* The package also includes a codon table, which is used by the function *translate_to_aa*, and can be found under *data/codons.rda*.
 
-Function 2 - [Can take input from function 1]
+**Functions included in the package**
+
+***dna*** - DNA sequence generation - generates a random DNA sequence of a given length
+
+Input: *sequence_length*, integer describing the intended length of the DNA sequence
+
+Output: randomly generated DNA sequence of length sequence_length
+
+Example: dna(10) may return the randomly sampled 10-character sequence "ACGTCGATAG".
+
+***transcribe_dna*** - DNA transcription - transcribes a DNA sequence into an RNA sequence by replacing thymine (T) with uracil (U) - [Can take input from function 1]
+
+Input: *dna*, a string containing a DNA sequence (expected: capital letters)
+
+Output: an RNA sequence in which thymine has been replaced by uracil
+
+Example: transcribe_dna("ACGTCGATAG") returns the RNA sequence "ACGUCGAUAG".
 
 Function 3 -
 
@@ -40,14 +56,14 @@ Converting DNA sequence files to RNA sequence files, etc
 
 Examples of other possible functions would be
 
-- adding stochastic methylation to some CpG sites on the DNA
+-   adding stochastic methylation to some CpG sites on the DNA
 
-- loading specific DNA/RNA/Protein sequences for a given organism and a given gene/protein from a relevant database
+-   loading specific DNA/RNA/Protein sequences for a given organism and a given gene/protein from a relevant database
 
-- adding "reverse polymerases" - say, to go from protein sequence to DNA (akin to the DRT3 system)
+-   adding "reverse polymerases" - say, to go from protein sequence to DNA (akin to the DRT3 system)
 
 **main points from the discussion in Task 3:**
 
-- It is a good idea to limit the number of dependencies your package has, to make it lighter and easier to understand, more self-contained, and to avoid dependencies' version conflicts
+-   It is a good idea to limit the number of dependencies your package has, to make it lighter and easier to understand, more self-contained, and to avoid dependencies' version conflicts
 
-- Howeverm it can’t always be avoided as many packages in R rely on each other, and writing each function from scratch can take a lot of time and effort
+-   Howeverm it can’t always be avoided as many packages in R rely on each other, and writing each function from scratch can take a lot of time and effort
