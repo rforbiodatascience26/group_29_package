@@ -20,7 +20,7 @@ library(central.dogma)
 
 **Package overview**
 
-This package contains a collection of simple R functions illustrating the central dogma of molecular biology. The aim of the package is to provide users with a simplified overview of the basic processes involved in the creation of proteins, starting from DNA. The functions can be used individually or together to demonstrate how a DNA sequence can be generated, transcribed into RNA, and finally translated into an amino acid sequence.
+This package contains a collection of simple R functions illustrating the central dogma of molecular biology. The functions can be used individually or together to demonstrate how a DNA sequence can be generated, transcribed into RNA, and finally translated into an amino acid sequence.
 
 For testing the functionalities of the package, the user can start by generating a random DNA sequence using the function *dna.* The package also includes a codon table, which is used by the function *translate_to_aa*, and can be found under *data/codons.rda*.
 
@@ -54,9 +54,9 @@ Example: define_codons("AUGGCCUAA") returns "AUG" "GCC" "UAA".
 
 Input: *RNA_codons*, a character vector of codons
 
-Output: a string with the amino acid sequence, in one-letter code ("_" marks a stop codon)
+Output: a string with the amino acid sequence, in one-letter code ("\_" marks a stop codon)
 
-Example: translate_to_aa(c("AUG", "GCC", "UAA")) returns "MA_".
+Example: translate_to_aa(c("AUG", "GCC", "UAA")) returns "MA\_".
 
 ***aa_counts*** - Amino acid counts - plots how many times each amino acid appears in a protein sequence - [Can take input from function 4]
 
@@ -70,7 +70,7 @@ Example: aa_counts("MAMAGK") draws a bar plot where M and A have a count of 2, a
 
 The functions can be chained to go from a random DNA sequence to a plot of amino acid counts:
 
-```{r}
+```{r, fig.width=5, fig.height=3}
 set.seed(1)
 my_dna <- dna(60)
 my_rna <- transcribe_dna(my_dna)
@@ -78,7 +78,6 @@ my_codons <- define_codons(my_rna)
 my_protein <- translate_to_aa(my_codons)
 aa_counts(my_protein)
 ```
-
 
 **use cases for the package:**
 
